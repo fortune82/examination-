@@ -1,0 +1,28 @@
+html,
+body {
+    font-family: 'PT Sans', sans-serif;
+}
+
+$blue:#81B3D2;
+$white: #fff;
+$grey:#EEEEEE;
+$lightGrey:#F2F2F2;
+s $brown: #766357;
+
+.container {
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
