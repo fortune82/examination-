@@ -1,17 +1,26 @@
 html,
 body {
     font-family: 'PT Sans', sans-serif;
+    font-family: 'Parisienne', cursive;
 }
 
 $blue:#81B3D2;
 $white: #fff;
 $grey:#EEEEEE;
 $lightGrey:#F2F2F2;
-s $brown: #766357;
+$brown: #766357;
+$black: #000;
+
+// header,
+// section,
+// footer {
+//     max-width: 1200px;
+//     margin: 0 auto;
+// }
 
 .container {
     max-width: 1200px;
-    padding: 0 15px;
+    padding: 0 10px;
     margin: 0 auto;
 }
 
@@ -21,6 +30,7 @@ li {
 
 a {
     text-decoration: none;
+    color: $black;
 
     &:hover {
         cursor: pointer;

@@ -1,1 +1,104 @@
 @import "_general.scss";
+
+
+.headerMenu {
+    background-color: $white;
+    max-width: 1050px;
+    padding: 0 15px;
+    margin: 0 auto;
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+        margin: 0;
+
+        li:not(.logo) {
+            padding: 15px;
+
+            a {
+                text-transform: uppercase;
+                font-weight: bold;
+                font-size: 14px;
+                font-family: 'PT Sans', sans-serif;
+                ;
+            }
+        }
+    }
+
+    .logo {
+        max-width: 140px;
+        max-height: 70px;
+    }
+}
+
+.welcome {
+    text-align: center;
+    margin-top: 60px;
+
+    h2 {
+        font-size: 45px;
+        text-transform: uppercase;
+        color: $blue;
+        font-weight: 900;
+        margin: 0;
+        font-family: 'PT Sans', sans-serif;
+    }
+
+    h3 {
+        font-size: 28px;
+        font-family: 'Parisienne', cursive;
+        margin: 0;
+        color: $brown;
+        position: relative;
+        z-index: 2;
+        top: 13px;
+
+        &:after,
+        &:before {
+            content: "";
+            display: inline-block;
+            height: 2px;
+            width: 29px;
+            background-color: $brown;
+            margin-left: 12px;
+            margin-bottom: 5px;
+
+        }
+
+        &:before {
+            content: "";
+            display: inline-block;
+            height: 2px;
+            width: 29px;
+            background-color: $brown;
+            margin-left: 12px;
+            margin-right: 12px;
+        }
+    }
+}
+
+.title {
+    background: url(../img/background.jpg);
+
+    h1 {
+        font-family: 'PT Sans', sans-serif;
+        font-size: 67px;
+        color: $white;
+        text-transform: uppercase;
+        padding-top: 68px;
+        text-align: center;
+        margin: 0;
+    }
+
+    h2 {
+        font-size: 40px;
+        font-family: 'Parisienne', cursive;
+        color: $white;
+        text-align: center;
+        font-weight: normal;
+        padding: 72px 0 25px;
+        margin: 0;
+
+    }
+}

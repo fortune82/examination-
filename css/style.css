@@ -1,1 +1,127 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+html,
+body {
+  font-family: 'PT Sans', sans-serif;
+  font-family: 'Parisienne', cursive;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+.headerMenu {
+  background-color: #fff;
+  max-width: 1050px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.headerMenu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0;
+  margin: 0;
+}
+
+.headerMenu ul li:not(.logo) {
+  padding: 15px;
+}
+
+.headerMenu ul li:not(.logo) a {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  font-family: 'PT Sans', sans-serif;
+}
+
+.headerMenu .logo {
+  max-width: 140px;
+  max-height: 70px;
+}
+
+.welcome {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.welcome h2 {
+  font-size: 45px;
+  text-transform: uppercase;
+  color: #81B3D2;
+  font-weight: 900;
+  margin: 0;
+  font-family: 'PT Sans', sans-serif;
+}
+
+.welcome h3 {
+  font-size: 28px;
+  font-family: 'Parisienne', cursive;
+  margin: 0;
+  color: #766357;
+  position: relative;
+  z-index: 2;
+  top: 13px;
+}
+
+.welcome h3:after, .welcome h3:before {
+  content: "";
+  display: inline-block;
+  height: 2px;
+  width: 29px;
+  background-color: #766357;
+  margin-left: 12px;
+  margin-bottom: 5px;
+}
+
+.welcome h3:before {
+  content: "";
+  display: inline-block;
+  height: 2px;
+  width: 29px;
+  background-color: #766357;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.title {
+  background: url(../img/background.jpg);
+}
+
+.title h1 {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 67px;
+  color: #fff;
+  text-transform: uppercase;
+  padding-top: 68px;
+  text-align: center;
+  margin: 0;
+}
+
+.title h2 {
+  font-size: 40px;
+  font-family: 'Parisienne', cursive;
+  color: #fff;
+  text-align: center;
+  font-weight: normal;
+  padding: 72px 0 25px;
+  margin: 0;
+}
+/*# sourceMappingURL=style.css.map */
