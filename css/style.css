@@ -23,6 +23,13 @@ a:hover {
   cursor: pointer;
 }
 
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 .headerMenu {
   background-color: #fff;
   max-width: 1050px;
@@ -49,7 +56,7 @@ a:hover {
   text-transform: uppercase;
   font-weight: bold;
   font-size: 14px;
-  font-family: 'PT Sans', sans-serif;
+  font-family: "PT Sans", sans-serif;
 }
 
 .headerMenu .logo {
@@ -68,12 +75,12 @@ a:hover {
   color: #81B3D2;
   font-weight: 900;
   margin: 0;
-  font-family: 'PT Sans', sans-serif;
+  font-family: "PT Sans", sans-serif;
 }
 
 .welcome h3 {
   font-size: 28px;
-  font-family: 'Parisienne', cursive;
+  font-family: "Parisienne", cursive;
   margin: 0;
   color: #766357;
   position: relative;
@@ -103,10 +110,35 @@ a:hover {
 
 .title {
   background: url(../img/background.jpg);
+  position: relative;
+  overflow: hidden;
+}
+
+.title:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  bottom: 0;
+  left: 0;
+  border-bottom: 70px solid #fff;
+  border-right: 50vw solid transparent;
+}
+
+.title:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-bottom: 70px solid #fff;
+  border-left: 50vw solid transparent;
 }
 
 .title h1 {
-  font-family: 'PT Sans', sans-serif;
+  font-family: "PT Sans", sans-serif;
   font-size: 67px;
   color: #fff;
   text-transform: uppercase;
@@ -117,11 +149,229 @@ a:hover {
 
 .title h2 {
   font-size: 40px;
-  font-family: 'Parisienne', cursive;
+  font-family: "Parisienne", cursive;
   color: #fff;
   text-align: center;
   font-weight: normal;
   padding: 72px 0 25px;
   margin: 0;
+}
+
+@media (max-width: 800px) {
+  nav {
+    display: none;
+  }
+  .title:after {
+    content: "";
+    display: block;
+    border-bottom: 40px solid #fff;
+  }
+  .title:before {
+    content: "";
+    display: block;
+    border-bottom: 40px solid #fff;
+  }
+}
+
+.discription {
+  text-align: center;
+}
+
+.discription h2 {
+  max-width: 510px;
+  font-family: "PT Sans", sans-serif;
+  font-size: 21px;
+  line-height: 26px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 0 auto;
+  margin-top: 27px;
+}
+
+.discription h3 {
+  font-family: "PT Sans", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  margin: 45px 0 50px;
+  text-transform: uppercase;
+  color: #333333;
+}
+
+.discription2,
+.discription3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.discription2 .discription2-left,
+.discription2 .discription3-right,
+.discription3 .discription2-left,
+.discription3 .discription3-right {
+  width: 33%;
+  background-color: #81B3D2;
+  color: #fff;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.discription2 .discription2-left h2,
+.discription2 .discription3-right h2,
+.discription3 .discription2-left h2,
+.discription3 .discription3-right h2 {
+  font-family: "PT Sans", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 21px;
+  margin: 0 auto;
+  margin-top: 47px;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  color: #fff;
+  width: 47px;
+  width: 140px;
+}
+
+.discription2 .discription2-left h3,
+.discription2 .discription3-right h3,
+.discription3 .discription2-left h3,
+.discription3 .discription3-right h3 {
+  font-family: "PT Sans", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0 40px 47px;
+}
+
+.discription2 p,
+.discription3 p {
+  font-family: "PT Sans", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 23px;
+}
+
+.discription2-right,
+.discription3-left {
+  background: url(../img/sedona.jpg);
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 0;
+}
+
+.icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 60px;
+}
+
+.icon .present h2 {
+  padding-top: 18px;
+}
+
+.icon h2 {
+  font-family: "PT Sans", sans-serif font-weight;
+  font-size: 21px;
+  text-transform: uppercase;
+  color: #000;
+  padding: 25px 0;
+  margin: 0;
+}
+
+.icon p {
+  font-family: "PT Sans", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: #000;
+  padding: 0 40px 80px;
+}
+
+.discription3-left {
+  background: url(../img/bridge.jpg);
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 0;
+}
+
+.discription4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.discription4-left {
+  width: 34%;
+  background-color: #EEEEEE;
+  color: #000;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.discription4-left h2 {
+  font-family: "PT Sans", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 21px;
+  margin: 0 auto;
+  margin-top: 47px;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  color: #000;
+  width: 47px;
+  width: 140px;
+}
+
+.discription4-left h3 {
+  font-family: "PT Sans", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000;
+  margin: 0 40px 47px;
+}
+
+.discription4-left p {
+  font-family: "PT Sans", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  text-align: center;
+  color: #000;
+  margin-bottom: 23px;
 }
 /*# sourceMappingURL=style.css.map */

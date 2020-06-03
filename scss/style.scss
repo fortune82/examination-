@@ -1,5 +1,10 @@
 @import "_general.scss";
 
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
 
 .headerMenu {
     background-color: $white;
@@ -20,7 +25,7 @@
                 text-transform: uppercase;
                 font-weight: bold;
                 font-size: 14px;
-                font-family: 'PT Sans', sans-serif;
+                font-family: $sans;
                 ;
             }
         }
@@ -42,12 +47,12 @@
         color: $blue;
         font-weight: 900;
         margin: 0;
-        font-family: 'PT Sans', sans-serif;
+        font-family: $sans;
     }
 
     h3 {
         font-size: 28px;
-        font-family: 'Parisienne', cursive;
+        font-family: $Parisienne;
         margin: 0;
         color: $brown;
         position: relative;
@@ -80,9 +85,36 @@
 
 .title {
     background: url(../img/background.jpg);
+    position: relative;
+    overflow: hidden;
+
+    &:after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        bottom: 0;
+        left: 0;
+        border-bottom: 70px solid $white;
+        border-right: 50vw solid transparent;
+    }
+
+    &:before {
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        position: absolute;
+        // top: 381px;
+        bottom: 0;
+        right: 0;
+        // right: 100px;
+        border-bottom: 70px solid $white;
+        border-left: 50vw solid transparent;
+    }
 
     h1 {
-        font-family: 'PT Sans', sans-serif;
+        font-family: $sans;
         font-size: 67px;
         color: $white;
         text-transform: uppercase;
@@ -93,12 +125,205 @@
 
     h2 {
         font-size: 40px;
-        font-family: 'Parisienne', cursive;
+        font-family: $Parisienne;
         color: $white;
         text-align: center;
         font-weight: normal;
         padding: 72px 0 25px;
         margin: 0;
+    }
+}
 
+@media(max-width: 800px) {
+    nav {
+        display: none;
+    }
+
+    .title {
+
+        &:after {
+            content: "";
+            display: block;
+            border-bottom: 40px solid $white;
+        }
+
+        &:before {
+            content: "";
+            display: block;
+            border-bottom: 40px solid $white;
+        }
+    }
+}
+
+.discription {
+    text-align: center;
+
+    h2 {
+        max-width: 510px;
+        font-family: $sans;
+        font-size: 21px;
+        line-height: 26px;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin: 0 auto;
+        margin-top: 27px;
+    }
+
+    h3 {
+        font-family: $sans;
+        font-weight: normal;
+        font-size: 14px;
+        margin: 45px 0 50px;
+        text-transform: uppercase;
+        color: #333333;
+    }
+}
+
+.discription2,
+.discription3 {
+    display: flex;
+
+    .discription2-left,
+    .discription3-right {
+        width: 33%;
+        background-color: $blue;
+        color: $white;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+
+        h2 {
+            font-family: $sans;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 21px;
+            line-height: 21px;
+            margin: 0 auto;
+            margin-top: 47px;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            color: $white;
+            width: 47px;
+            width: 140px;
+        }
+
+
+        h3 {
+            font-family: $sans;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 21px;
+            text-align: center;
+            text-transform: uppercase;
+            color: $white;
+            margin: 0 40px 47px;
+        }
+    }
+
+    p {
+        font-family: $sans;
+        font-weight: normal;
+        font-size: 14px;
+        text-align: center;
+        color: $white;
+        margin-bottom: 23px;
+
+    }
+}
+
+.discription2-right,
+.discription3-left {
+    background: url(../img/sedona.jpg);
+    flex-grow: 1;
+    padding: 0;
+}
+
+.icon {
+    display: flex;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 60px;
+
+    .present h2 {
+        padding-top: 18px;
+    }
+
+
+    h2 {
+        font-family: $sans font-weight;
+        font-size: 21px;
+        text-transform: uppercase;
+        color: $black;
+        padding: 25px 0;
+        margin: 0;
+    }
+
+    p {
+        font-family: $sans;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 21px;
+        text-transform: uppercase;
+        color: $black;
+        padding: 0 40px 80px;
+
+    }
+}
+
+.discription3-left {
+    background: url(../img/bridge.jpg);
+    flex-grow: 1;
+    padding: 0;
+}
+
+.discription4 {
+    display: flex;
+}
+
+.discription4-left {
+    width: 34%;
+    background-color: $grey;
+    color: $black;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    h2 {
+        font-family: $sans;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 21px;
+        line-height: 21px;
+        margin: 0 auto;
+        margin-top: 47px;
+        margin-bottom: 25px;
+        text-transform: uppercase;
+        color: $black;
+        width: 47px;
+        width: 140px;
+    }
+
+    h3 {
+        font-family: $sans;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 21px;
+        text-align: center;
+        text-transform: uppercase;
+        color: $black;
+        margin: 0 40px 47px;
+    }
+
+    p {
+        font-family: $sans;
+        font-weight: normal;
+        font-size: 14px;
+        text-align: center;
+        color: $black;
+        margin-bottom: 23px;
     }
 }
