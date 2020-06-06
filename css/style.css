@@ -661,4 +661,38 @@ button {
     font-size: 22px;
   }
 }
+
+@media (max-width: 580px) {
+  form .searchInformation {
+    max-width: 100%;
+  }
+  form .searchInformation .person {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  form .searchInformation .person input,
+  form .searchInformation .person button {
+    margin-bottom: 30px;
+  }
+  form .searchInformation .person .person1,
+  form .searchInformation .person .person2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+}
+
+@media (max-width: 480px) {
+  .search {
+    padding: 20px 62px;
+  }
+}
 /*# sourceMappingURL=style.css.map */

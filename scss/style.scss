@@ -350,14 +350,11 @@
     text-transform: uppercase;
     margin: 0 auto;
     outline: none;
-
 }
-
 
 .noactive {
     display: none;
 }
-
 
 .active {
     display: block;
@@ -587,4 +584,52 @@
             font-size: 22px;
         }
     }
+}
+
+@media(max-width:580px) {
+    // .search {
+    //     margin: 0 auto;
+    // }
+
+    form {
+
+        .searchBtn {
+            // padding: 20px 130px;
+        }
+
+        .searchInformation {
+            max-width: 100%;
+            // border: 1px solid red;
+            // // padding: 0 69px;
+            // margin: 0 auto;
+
+            .person {
+                flex-direction: column;
+
+                input,
+                button {
+                    margin-bottom: 30px;
+                }
+
+                .person1,
+                .person2 {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: baseline;
+
+                }
+
+            }
+        }
+    }
+}
+
+@media(max-width:480px) {
+
+    .search {
+        padding: 20px 62px;
+    }
+
+
+
 }
