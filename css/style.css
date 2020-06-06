@@ -403,25 +403,40 @@ button {
   height: 476px;
 }
 
+.search {
+  font-size: 21px;
+  color: #fff;
+  background-color: #766357;
+  padding: 30px 130px;
+  font-weight: 600;
+  border: none;
+  text-transform: uppercase;
+  margin: 0 auto;
+  outline: none;
+}
+
 form {
-  max-width: 570px;
+  max-width: 552px;
   margin: 0 auto;
   text-transform: uppercase;
   font-family: "PT Sans", sans-serif;
   font-weight: bold;
 }
 
-form .search,
 form .searchBtn {
   font-size: 21px;
   color: #fff;
   background-color: #766357;
-  padding: 30px 125px;
+  padding: 30px 130px;
   font-weight: 600;
+  border: none;
+  text-transform: uppercase;
+  margin: 0 auto;
 }
 
 form .searchInformation {
   position: absolute;
+  padding: 0 68px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -432,12 +447,39 @@ form .searchInformation {
   background: #fff;
 }
 
-form .searchInformation .date {
-  margin-top: 55px;
+form .searchInformation label {
+  text-align: start;
+  width: 110px;
+  font-size: 14px;
 }
 
-form .searchInformation .date input {
-  margin-bottom: 35px;
+form .searchInformation .date1,
+form .searchInformation .date2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  max-width: 458px;
+  margin-bottom: 30px;
+}
+
+form .searchInformation .date1 input,
+form .searchInformation .date2 input {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  background-color: #EEEEEE;
+  border: none;
+  height: 38px;
+}
+
+form .searchInformation .date1 {
+  margin-top: 55px;
 }
 
 form .searchInformation .date {
@@ -456,23 +498,78 @@ form .person {
   display: flex;
 }
 
-form .person .choose {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+form .person input,
+form .person button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: #EEEEEE;
+  font-size: 25px;
+  color: #333333;
+  border: none;
+}
+
+form .person label {
+  width: 110px;
+  font-size: 14px;
+}
+
+form .person .leftBtn {
+  margin-right: 40px;
 }
 
 form .searchBtn {
   background-color: #81B3D2;
-  border: none;
+  margin: 55px 0;
+}
+
+.foot {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.foot .phone {
+  margin: 23px 0 35px 155px;
+  font-size: 21px;
+  font-family: "PT Sans", sans-serif;
+  font-weight: 600;
   text-transform: uppercase;
-  margin: 55px;
+}
+
+.foot .phone h2 {
+  font-size: 21px;
+}
+
+.foot .icon {
+  margin: 0;
+  padding: 36px 0;
+}
+
+.foot .twitter,
+.foot .facebook,
+.foot .tube {
+  background-color: #81B3D2;
+  width: 46px;
+  height: 48px;
+  margin-right: 5px;
+}
+
+.foot .twitter .fab,
+.foot .facebook .fab,
+.foot .tube .fab {
+  padding: 13px 10px;
+  color: #fff;
+  font-size: 22px;
+}
+
+.foot .website {
+  margin: 23px 155px;
 }
 /*# sourceMappingURL=style.css.map */

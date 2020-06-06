@@ -355,64 +355,157 @@
     height: 476px;
 }
 
+.search {
+    font-size: 21px;
+    color: $white;
+    background-color: $brown;
+    padding: 30px 130px;
+    font-weight: 600;
+    border: none;
+    text-transform: uppercase;
+    margin: 0 auto;
+    outline: none;
+}
 
+// .search {
+//     max-width: 100%;
+
+// }
 form {
-    max-width: 570px;
+    max-width: 552px;
     margin: 0 auto;
     text-transform: uppercase;
     font-family: $sans;
     font-weight: bold;
 
-
-
-    .search,
     .searchBtn {
         font-size: 21px;
         color: $white;
         background-color: $brown;
-        padding: 30px 125px;
+        padding: 30px 130px;
         font-weight: 600;
-
+        border: none;
+        text-transform: uppercase;
+        margin: 0 auto;
     }
 
     .searchInformation {
         position: absolute;
-        // padding: 55px 55px;
+        // z-index: -2;
+        padding: 0 68px;
         display: flex;
         flex-direction: column;
         background: $white;
+        // display: none;
 
-        .date {
-            margin-top: 55px;
+        label {
+            text-align: start;
+            width: 110px;
+            font-size: 14px;
+        }
+
+
+        .date1,
+        .date2 {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            max-width: 458px;
+            margin-bottom: 30px;
+
 
             input {
-                margin-bottom: 35px;
+                flex-grow: 1;
+                background-color: $grey;
+                border: none;
+                height: 38px;
             }
+        }
+
+        .date1 {
+            margin-top: 55px;
         }
 
         .date {
             display: flex;
             flex-direction: column;
         }
-
     }
+
 
     .person {
         display: flex;
-        // flex-direction: column;
 
-        .choose {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
+        input,
+        button {
+            width: 40px;
+            height: 40px;
+            border: none;
+            background-color: $grey;
+            font-size: 25px;
+            color: $darkGrey;
+            border: none;
+
+        }
+
+        label {
+            // text-align: start;
+            width: 110px;
+            font-size: 14px;
+        }
+
+
+        .leftBtn {
+            margin-right: 40px;
         }
     }
 
     .searchBtn {
         background-color: $blue;
-        border: none;
-        text-transform: uppercase;
-        margin: 55px;
+        margin: 55px 0;
     }
 
+}
+
+.foot {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    .phone {
+        margin: 23px 0 35px 155px;
+        font-size: 21px;
+        font-family: $sans;
+        font-weight: 600;
+        text-transform: uppercase;
+
+        h2 {
+            font-size: 21px;
+        }
+    }
+
+    .icon {
+        margin: 0;
+        padding: 36px 0;
+    }
+
+    .twitter,
+    .facebook,
+    .tube {
+        background-color: $blue;
+        width: 46px;
+        height: 48px;
+        margin-right: 5px;
+
+        .fab {
+            padding: 13px 10px;
+            color: $white;
+            font-size: 22px;
+        }
+    }
+
+    .website {
+        margin: 23px 155px;
+    }
 }
