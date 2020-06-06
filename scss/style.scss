@@ -236,6 +236,7 @@
 .discription2-right,
 .discription3-left {
     background: url(../img/sedona.jpg);
+    background-repeat: round;
     flex-grow: 1;
     padding: 0;
 }
@@ -252,7 +253,7 @@
 
 
     h2 {
-        font-family: $sans font-weight;
+        font-family: $sans;
         font-size: 21px;
         text-transform: uppercase;
         color: $black;
@@ -273,7 +274,8 @@
 }
 
 .discription3-left {
-    background: url(../img/bridge.jpg);
+    background: url(../img/bridge.jpg ) no-repeat;
+    background-repeat: round;
     flex-grow: 1;
     padding: 0;
 }
@@ -326,4 +328,91 @@
         color: $black;
         margin-bottom: 23px;
     }
+}
+
+.discription5 {
+    h2 {
+        font-size: 30px;
+        padding-top: 60px;
+        padding-bottom: 40px;
+        margin: 0 auto;
+    }
+
+    h3 {
+        margin: 0 auto;
+        font-family: $sans;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 24px;
+        text-transform: uppercase;
+        color: $darkGrey;
+        padding-bottom: 45px;
+    }
+}
+
+.mapGoogle {
+    width: 100%;
+    height: 476px;
+}
+
+
+form {
+    max-width: 570px;
+    margin: 0 auto;
+    text-transform: uppercase;
+    font-family: $sans;
+    font-weight: bold;
+
+
+
+    .search,
+    .searchBtn {
+        font-size: 21px;
+        color: $white;
+        background-color: $brown;
+        padding: 30px 125px;
+        font-weight: 600;
+
+    }
+
+    .searchInformation {
+        position: absolute;
+        // padding: 55px 55px;
+        display: flex;
+        flex-direction: column;
+        background: $white;
+
+        .date {
+            margin-top: 55px;
+
+            input {
+                margin-bottom: 35px;
+            }
+        }
+
+        .date {
+            display: flex;
+            flex-direction: column;
+        }
+
+    }
+
+    .person {
+        display: flex;
+        // flex-direction: column;
+
+        .choose {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    .searchBtn {
+        background-color: $blue;
+        border: none;
+        text-transform: uppercase;
+        margin: 55px;
+    }
+
 }

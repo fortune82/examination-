@@ -1,7 +1,6 @@
 html,
 body {
   font-family: 'PT Sans', sans-serif;
-  font-family: 'Parisienne', cursive;
 }
 
 .container {
@@ -20,6 +19,10 @@ a {
 }
 
 a:hover {
+  cursor: pointer;
+}
+
+button {
   cursor: pointer;
 }
 
@@ -270,6 +273,7 @@ a:hover {
 .discription2-right,
 .discription3-left {
   background: url(../img/sedona.jpg);
+  background-repeat: round;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -290,7 +294,7 @@ a:hover {
 }
 
 .icon h2 {
-  font-family: "PT Sans", sans-serif font-weight;
+  font-family: "PT Sans", sans-serif;
   font-size: 21px;
   text-transform: uppercase;
   color: #000;
@@ -309,7 +313,8 @@ a:hover {
 }
 
 .discription3-left {
-  background: url(../img/bridge.jpg);
+  background: url(../img/bridge.jpg) no-repeat;
+  background-repeat: round;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -373,5 +378,101 @@ a:hover {
   text-align: center;
   color: #000;
   margin-bottom: 23px;
+}
+
+.discription5 h2 {
+  font-size: 30px;
+  padding-top: 60px;
+  padding-bottom: 40px;
+  margin: 0 auto;
+}
+
+.discription5 h3 {
+  margin: 0 auto;
+  font-family: "PT Sans", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #333333;
+  padding-bottom: 45px;
+}
+
+.mapGoogle {
+  width: 100%;
+  height: 476px;
+}
+
+form {
+  max-width: 570px;
+  margin: 0 auto;
+  text-transform: uppercase;
+  font-family: "PT Sans", sans-serif;
+  font-weight: bold;
+}
+
+form .search,
+form .searchBtn {
+  font-size: 21px;
+  color: #fff;
+  background-color: #766357;
+  padding: 30px 125px;
+  font-weight: 600;
+}
+
+form .searchInformation {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #fff;
+}
+
+form .searchInformation .date {
+  margin-top: 55px;
+}
+
+form .searchInformation .date input {
+  margin-bottom: 35px;
+}
+
+form .searchInformation .date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+form .person {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+form .person .choose {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+form .searchBtn {
+  background-color: #81B3D2;
+  border: none;
+  text-transform: uppercase;
+  margin: 55px;
 }
 /*# sourceMappingURL=style.css.map */

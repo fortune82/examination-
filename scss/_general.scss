@@ -1,7 +1,7 @@
 html,
 body {
     font-family: 'PT Sans', sans-serif;
-    font-family: 'Parisienne', cursive;
+    // font-family: 'Parisienne', cursive;
 }
 
 $sans: 'PT Sans',
@@ -14,6 +14,7 @@ $grey:#EEEEEE;
 $lightGrey:#F2F2F2;
 $brown: #766357;
 $black: #000;
+$darkGrey: #333333;
 
 // header,
 // section,
@@ -39,4 +40,8 @@ a {
     &:hover {
         cursor: pointer;
     }
+}
+
+button {
+    cursor: pointer;
 }

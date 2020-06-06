@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,600;0,800;1,700&family=PT+Sans:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap">
     <link rel="stylesheet" href="css/style.css">
     <title>Sedona</title>
 </head>
@@ -106,12 +108,38 @@
     <section>
         <div class="container discription discription5">
             <h2>Заинтересовались?</h2>
-            <h3>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</h3>
+            <h3>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне</h3>
+            <form action="index.php">
+                <div class="search">поиск гостиницы в седоне</div>
+                <div class="searchInformation">
+                    <div class="date">
+                        <label for="dateIn">дата заезда
+                            <input type="date" id="dateIn"></label>
+                        <label for="dateOut">дата выезда
+                            <input type="date" id="dateOut"></label>
+                    </div>
+
+                    <div class="person">
+                        <label for="choose ">взрослые</label>
+                        <button>-</button>
+                        <input type="number" id="choose">
+                        <button>+</button>
+                        <label for="choose">дети</label>
+                        <button>-</button>
+                        <input type="number" id="choose">
+                        <button>+</button>
+                    </div>
+                    <button class="searchBtn">найти</button>
+
+                </div>
+            </form>
         </div>
     </section>
     <section>
-        <div class="container">
-
+        <div class="container map">
+            <iframe class="mapGoogle"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d105104.39977707973!2d-112.39756757849128!3d34.59120004328004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1591426635562!5m2!1sru!2sua"
+                frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         </div>
     </section>
     <section>
