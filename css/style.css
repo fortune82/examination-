@@ -1,6 +1,7 @@
 html,
 body {
   font-family: 'PT Sans', sans-serif;
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -160,22 +161,6 @@ button {
   margin: 0;
 }
 
-@media (max-width: 800px) {
-  nav {
-    display: none;
-  }
-  .title:after {
-    content: "";
-    display: block;
-    border-bottom: 40px solid #fff;
-  }
-  .title:before {
-    content: "";
-    display: block;
-    border-bottom: 40px solid #fff;
-  }
-}
-
 .discription {
   text-align: center;
 }
@@ -205,13 +190,16 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  max-height: 258px;
+  overflow: hidden;
 }
 
 .discription2 .discription2-left,
 .discription2 .discription3-right,
 .discription3 .discription2-left,
 .discription3 .discription3-right {
-  width: 33%;
+  max-width: 400px;
+  max-height: 260px;
   background-color: #81B3D2;
   color: #fff;
   padding: 0;
@@ -270,14 +258,10 @@ button {
   margin-bottom: 23px;
 }
 
-.discription2-right,
-.discription3-left {
-  background: url(../img/sedona.jpg);
-  background-repeat: round;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  padding: 0;
+.discription2-right img,
+.discription3-left img {
+  max-width: 100%;
+  height: 260px;
 }
 
 .icon {
@@ -415,7 +399,12 @@ button {
   outline: none;
 }
 
-form {
+.noactive {
+  display: none;
+}
+
+.active {
+  display: block;
   max-width: 552px;
   margin: 0 auto;
   text-transform: uppercase;
@@ -423,7 +412,7 @@ form {
   font-weight: bold;
 }
 
-form .searchBtn {
+.active .searchBtn {
   font-size: 21px;
   color: #fff;
   background-color: #766357;
@@ -434,7 +423,7 @@ form .searchBtn {
   margin: 0 auto;
 }
 
-form .searchInformation {
+.active .searchInformation {
   position: absolute;
   padding: 0 68px;
   display: -webkit-box;
@@ -447,14 +436,14 @@ form .searchInformation {
   background: #fff;
 }
 
-form .searchInformation label {
+.active .searchInformation label {
   text-align: start;
   width: 110px;
   font-size: 14px;
 }
 
-form .searchInformation .date1,
-form .searchInformation .date2 {
+.active .searchInformation .date1,
+.active .searchInformation .date2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -468,8 +457,8 @@ form .searchInformation .date2 {
   margin-bottom: 30px;
 }
 
-form .searchInformation .date1 input,
-form .searchInformation .date2 input {
+.active .searchInformation .date1 input,
+.active .searchInformation .date2 input {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -478,11 +467,17 @@ form .searchInformation .date2 input {
   height: 38px;
 }
 
-form .searchInformation .date1 {
+.active .searchInformation input[type="number"]::-webkit-outer-spin-button,
+.active .searchInformation input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0 auto;
+}
+
+.active .searchInformation .date1 {
   margin-top: 55px;
 }
 
-form .searchInformation .date {
+.active .searchInformation .date {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -492,14 +487,14 @@ form .searchInformation .date {
           flex-direction: column;
 }
 
-form .person {
+.active .person {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-form .person input,
-form .person button {
+.active .person input,
+.active .person button {
   width: 40px;
   height: 40px;
   border: none;
@@ -509,16 +504,16 @@ form .person button {
   border: none;
 }
 
-form .person label {
+.active .person label {
   width: 110px;
   font-size: 14px;
 }
 
-form .person .leftBtn {
+.active .person .leftBtn {
   margin-right: 40px;
 }
 
-form .searchBtn {
+.active .searchBtn {
   background-color: #81B3D2;
   margin: 55px 0;
 }
@@ -533,10 +528,11 @@ form .searchBtn {
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
+  max-width: 970px;
 }
 
 .foot .phone {
-  margin: 23px 0 35px 155px;
+  margin: 23px 0 35px 0;
   font-size: 21px;
   font-family: "PT Sans", sans-serif;
   font-weight: 600;
@@ -547,9 +543,12 @@ form .searchBtn {
   font-size: 21px;
 }
 
-.foot .icon {
+.foot .iconBottom {
   margin: 0;
   padding: 36px 0;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
 .foot .twitter,
@@ -570,6 +569,96 @@ form .searchBtn {
 }
 
 .foot .website {
-  margin: 23px 155px;
+  margin: 23px 0;
+}
+
+@media (max-width: 800px) {
+  .headerMenu {
+    padding: 0;
+  }
+  .headerMenu ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0;
+  }
+  .headerMenu ul li:not(.logo) {
+    padding: 10px 0;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#81B3D2));
+    background: linear-gradient(to bottom, #fff, #81B3D2);
+    width: 100%;
+    text-align: center;
+  }
+  .headerMenu ul li:not(.logo) a {
+    display: block;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: "PT Sans", sans-serif;
+    color: #fff;
+    widows: 100%;
+  }
+  .headerMenu .logo {
+    max-width: 140px;
+    max-height: 70px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 650px) {
+  .icon {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .discription2,
+  .discription3 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-height: 100%;
+  }
+  .discription2 .discription2-left,
+  .discription2 .discription3-right,
+  .discription3 .discription2-left,
+  .discription3 .discription3-right {
+    max-width: 100%;
+  }
+  .discription3-right {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+  .discription4 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .discription4-left {
+    width: 100%;
+  }
+  .twitter,
+  .facebook,
+  .tube {
+    margin-bottom: 5px;
+  }
+  .twitter .fab,
+  .facebook .fab,
+  .tube .fab {
+    padding: 13px 10px;
+    color: #fff;
+    font-size: 22px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

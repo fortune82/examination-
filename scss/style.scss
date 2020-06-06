@@ -105,10 +105,8 @@
         width: 0;
         height: 0;
         position: absolute;
-        // top: 381px;
         bottom: 0;
         right: 0;
-        // right: 100px;
         border-bottom: 70px solid $white;
         border-left: 50vw solid transparent;
     }
@@ -131,27 +129,6 @@
         font-weight: normal;
         padding: 72px 0 25px;
         margin: 0;
-    }
-}
-
-@media(max-width: 800px) {
-    nav {
-        display: none;
-    }
-
-    .title {
-
-        &:after {
-            content: "";
-            display: block;
-            border-bottom: 40px solid $white;
-        }
-
-        &:before {
-            content: "";
-            display: block;
-            border-bottom: 40px solid $white;
-        }
     }
 }
 
@@ -182,10 +159,13 @@
 .discription2,
 .discription3 {
     display: flex;
+    max-height: 258px;
+    overflow: hidden;
 
     .discription2-left,
     .discription3-right {
-        width: 33%;
+        max-width: 400px;
+        max-height: 260px;
         background-color: $blue;
         color: $white;
         padding: 0;
@@ -233,12 +213,12 @@
     }
 }
 
-.discription2-right,
-.discription3-left {
-    background: url(../img/sedona.jpg);
-    background-repeat: round;
-    flex-grow: 1;
-    padding: 0;
+
+
+.discription2-right img,
+.discription3-left img {
+    max-width: 100%;
+    height: 260px;
 }
 
 .icon {
@@ -272,6 +252,8 @@
 
     }
 }
+
+
 
 .discription3-left {
     background: url(../img/bridge.jpg ) no-repeat;
@@ -330,6 +312,9 @@
     }
 }
 
+
+
+
 .discription5 {
     h2 {
         font-size: 30px;
@@ -365,13 +350,17 @@
     text-transform: uppercase;
     margin: 0 auto;
     outline: none;
+
 }
 
-// .search {
-//     max-width: 100%;
 
-// }
-form {
+.noactive {
+    display: none;
+}
+
+
+.active {
+    display: block;
     max-width: 552px;
     margin: 0 auto;
     text-transform: uppercase;
@@ -404,7 +393,6 @@ form {
             font-size: 14px;
         }
 
-
         .date1,
         .date2 {
             display: flex;
@@ -422,6 +410,14 @@ form {
             }
         }
 
+
+
+        input[type="number"]::-webkit-outer-spin-button,
+        input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0 auto;
+        }
+
         .date1 {
             margin-top: 55px;
         }
@@ -431,7 +427,6 @@ form {
             flex-direction: column;
         }
     }
-
 
     .person {
         display: flex;
@@ -468,13 +463,13 @@ form {
 }
 
 .foot {
-
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+    max-width: 970px;
 
     .phone {
-        margin: 23px 0 35px 155px;
+        margin: 23px 0 35px 0;
         font-size: 21px;
         font-family: $sans;
         font-weight: 600;
@@ -485,9 +480,10 @@ form {
         }
     }
 
-    .icon {
+    .iconBottom {
         margin: 0;
         padding: 36px 0;
+        display: inline-flex;
     }
 
     .twitter,
@@ -506,6 +502,89 @@ form {
     }
 
     .website {
-        margin: 23px 155px;
+        margin: 23px 0;
+    }
+}
+
+
+@media(max-width: 800px) {
+
+    .headerMenu {
+        padding: 0;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+
+
+            li:not(.logo) {
+                padding: 10px 0;
+                order: 2;
+                background: linear-gradient(to bottom, $white, $blue);
+                width: 100%;
+                text-align: center;
+
+                a {
+                    display: block;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    font-size: 14px;
+                    font-family: $sans;
+                    color: $white;
+                    widows: 100%;
+                }
+            }
+        }
+
+        .logo {
+            max-width: 140px;
+            max-height: 70px;
+            margin: 0 auto;
+            margin-bottom: 10px;
+        }
+    }
+
+}
+
+@media (max-width:650px) {
+    .icon {
+        flex-direction: column;
+    }
+
+    .discription2,
+    .discription3 {
+        flex-direction: column;
+        max-height: 100%;
+
+        .discription2-left,
+        .discription3-right {
+            max-width: 100%;
+
+        }
+    }
+
+    .discription3-right {
+        order: -1;
+    }
+
+    .discription4 {
+        flex-direction: column;
+    }
+
+    .discription4-left {
+        width: 100%;
+    }
+
+    .twitter,
+    .facebook,
+    .tube {
+        margin-bottom: 5px;
+
+        .fab {
+            padding: 13px 10px;
+            color: $white;
+            font-size: 22px;
+        }
     }
 }
