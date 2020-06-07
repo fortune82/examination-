@@ -597,43 +597,93 @@
     //     margin: 0 auto;
     // }
 
-    form {
+    .formSearch {
+        max-width: 580px;
 
-        .searchBtn {
-            // padding: 20px 130px;
+
+
+
+        form {
+
+            .searchBtn {
+                padding: 20px 80px;
+                text-align: center;
+            }
+
+
+            .searchInformation {
+                width: 98%;
+
+                .person {
+                    flex-direction: column;
+
+                    input,
+                    button {
+                        margin-bottom: 30px;
+                    }
+
+                    .person1,
+                    .person2 {
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: baseline;
+
+                    }
+
+                }
+            }
+
+            .searchInformation {
+                padding: 0 20px;
+            }
+        }
+    }
+
+    .foot {
+
+        flex-direction: column;
+
+        .phone {
+            font-size: 21px;
+            margin: 0 auto;
+            padding: 20px 0;
         }
 
-        .searchInformation {
-            max-width: 100%;
-            // border: 1px solid red;
-            // // padding: 0 69px;
-            // margin: 0 auto;
+        .icon {
+            display: inline-block;
+            padding: 20px 0;
+        }
 
-            .person {
-                flex-direction: column;
+        .twitter,
+        .facebook,
+        .tube {
+            display: inline-block;
+        }
 
-                input,
-                button {
-                    margin-bottom: 30px;
-                }
-
-                .person1,
-                .person2 {
-                    display: flex;
-                    justify-content: flex-start;
-                    align-items: baseline;
-
-                }
-
-            }
+        .arrowUp {
+            margin-left: auto;
         }
     }
 }
 
+
 @media(max-width:480px) {
+
+    .searchInformation {
+        padding: 30px;
+    }
+
+    .discription5 h3 {
+        padding: 10 7px;
+    }
 
     .search {
         padding: 20px 62px;
     }
+
+    form .searchBtn {
+        padding: 30px 50px;
+    }
+
 
 }

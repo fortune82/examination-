@@ -8,6 +8,7 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,600;0,800;1,700&family=PT+Sans:wght@400;700&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap">
+    <link rel="shortcut icon" href="https://img.icons8.com/dusk/64/000000/globe-earth.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Sedona</title>
@@ -130,38 +131,41 @@
             <div class="container discription discription5">
                 <h2>Заинтересовались?</h2>
                 <h3>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне</h3>
-                <button id="hotel" class="search">поиск гостиницы в седоне</button>
-                <form action="index.php" class="noactive">
-                    <div data-ser class="searchInformation">
-                        <div class="date">
-                            <div class="date1">
-                                <label for="dateIn">дата заезда: </label>
-                                <input type="date" id="dateIn">
-                            </div>
-                            <div class="date2">
-                                <label for="dateOut">дата выезда: </label>
-                                <input type="date" id="dateOut">
-                            </div>
-                        </div>
 
-                        <div class="person">
-                            <div class="person1">
-                                <label for="choose ">взрослые: </label>
-                                <button>-</button>
-                                <input type="number" id="choose">
-                                <button class="leftBtn">+</button>
+                <div class="formSearch">
+                    <button id="hotel" class="search">поиск гостиницы в седоне</button>
+                    <form action="index.php" class="noactive">
+                        <div data-ser class="searchInformation">
+                            <div class="date">
+                                <div class="date1">
+                                    <label for="dateIn">дата заезда: </label>
+                                    <input type="date" id="dateIn">
+                                </div>
+                                <div class="date2">
+                                    <label for="dateOut">дата выезда: </label>
+                                    <input type="date" id="dateOut">
+                                </div>
                             </div>
-                            <div class="person2">
-                                <label for="choose">дети: </label>
-                                <button>-</button>
-                                <input type="number" id="choose">
-                                <button>+</button>
-                            </div>
-                        </div>
-                        <button class="searchBtn">найти</button>
 
-                    </div>
-                </form>
+                            <div class="person">
+                                <div class="person1">
+                                    <label for="choose ">взрослые: </label>
+                                    <button>-</button>
+                                    <input type="number" id="choose">
+                                    <button class="leftBtn">+</button>
+                                </div>
+                                <div class="person2">
+                                    <label for="choose">дети: </label>
+                                    <button>-</button>
+                                    <input type="number" id="choose">
+                                    <button>+</button>
+                                </div>
+                            </div>
+                            <button class="searchBtn">найти</button>
+
+                        </div>
+                    </form>
+                </div>
             </div>
         </section>
         <section id="map">
@@ -178,12 +182,13 @@
                     <a href="tel:+74956660166">тел: +7(495) 666-01-66</a>
                 </div>
                 <div class="icon">
-                    <div class="twitter"><a href="https://twitter.com" target="_blank"><i
+                    <div class="twitter"><a href="https://twitter.com" target="_blank" title="twitter"><i
                                 class="fab fa-twitter"></a></i>
                     </div>
-                    <div class="facebook"><a href="https://facebook.com" target="_blank"><i
+                    <div class="facebook"><a href="https://facebook.com" target="_blank" title="facebook"><i
                                 class="fab fa-facebook-f"></i></a></div>
-                    <div class="tube"><a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <div class="tube"><a href="https://youtube.com" target="_blank" title="youtube"><i
+                                class="fab fa-youtube"></i></a>
                     </div>
                 </div>
                 <button class="arrowUp"><a href=""><i class="fas fa-arrow-alt-circle-up"></i></a></button>
