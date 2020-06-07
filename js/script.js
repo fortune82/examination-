@@ -3,3 +3,9 @@ $(document).ready(function () {
         $('form').toggleClass('active')
     });
 })
+
+$('.arrowUp').click(function () {
+    $("html, body").animate({
+        scrollTop: 0
+    }, 100);
+});

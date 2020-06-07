@@ -568,8 +568,15 @@ button {
   font-size: 22px;
 }
 
-.foot .website {
+.foot .arrowUp {
   margin: 23px 0;
+  font-size: 40px;
+  border: none;
+  background-color: #fff;
+}
+
+.foot .arrowUp .fas {
+  color: #766357;
 }
 
 @media (max-width: 800px) {

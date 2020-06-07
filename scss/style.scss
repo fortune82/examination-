@@ -498,8 +498,15 @@
         }
     }
 
-    .website {
+    .arrowUp {
         margin: 23px 0;
+        font-size: 40px;
+        border: none;
+        background-color: $white;
+
+        .fas {
+            color: $brown;
+        }
     }
 }
 
@@ -629,7 +636,5 @@
     .search {
         padding: 20px 62px;
     }
-
-
 
 }
