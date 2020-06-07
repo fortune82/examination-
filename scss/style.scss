@@ -68,7 +68,6 @@
             background-color: $brown;
             margin-left: 12px;
             margin-bottom: 5px;
-
         }
 
         &:before {
@@ -84,31 +83,47 @@
 }
 
 .title {
-    background: url(../img/background.jpg);
+    background: url(../img/background.jpg) center;
     position: relative;
-    overflow: hidden;
 
-    &:after {
-        content: "";
-        display: block;
-        width: 0;
-        height: 0;
-        bottom: 0;
-        left: 0;
-        border-bottom: 70px solid $white;
-        border-right: 50vw solid transparent;
-    }
+    .triangle {
+        display: inline-flex;
 
-    &:before {
-        content: "";
-        display: block;
-        width: 0;
-        height: 0;
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        border-bottom: 70px solid $white;
-        border-left: 50vw solid transparent;
+        .firstLeftTriangle {
+            width: 0;
+            height: 0;
+            bottom: -2px;
+            left: -2px;
+            position: absolute;
+            border-bottom: 70px solid $white;
+            border-right: 50vw solid transparent;
+        }
+
+        .firstRightTriangle {
+            width: 0;
+            height: 0;
+            position: absolute;
+            bottom: -2px;
+            right: -2px;
+            border-bottom: 70px solid $white;
+            border-left: 50vw solid transparent;
+        }
+
+        .rightTriangle,
+        .leftTriangle {
+            width: 0;
+            height: 0;
+            position: absolute;
+            right: 200px;
+            bottom: -5px;
+            border-bottom: 80px solid $white;
+            border-left: 32vw solid transparent;
+        }
+
+        .leftTriangle {
+            left: 200px;
+            transform: scale(-1, 1);
+        }
     }
 
     h1 {
@@ -129,6 +144,7 @@
         font-weight: normal;
         padding: 72px 0 25px;
         margin: 0;
+        margin-bottom: 40px;
     }
 }
 
@@ -189,7 +205,6 @@
             width: 140px;
         }
 
-
         h3 {
             font-family: $sans;
             font-weight: normal;
@@ -209,11 +224,8 @@
         text-align: center;
         color: $white;
         margin-bottom: 23px;
-
     }
 }
-
-
 
 .discription2-right img,
 .discription3-left img {
@@ -230,7 +242,6 @@
     .present h2 {
         padding-top: 18px;
     }
-
 
     h2 {
         font-family: $sans;
@@ -249,11 +260,8 @@
         text-transform: uppercase;
         color: $black;
         padding: 0 40px 80px;
-
     }
 }
-
-
 
 .discription3-left {
     background: url(../img/bridge.jpg ) no-repeat;
@@ -311,9 +319,6 @@
         margin-bottom: 23px;
     }
 }
-
-
-
 
 .discription5 {
     h2 {
@@ -382,7 +387,6 @@
         display: flex;
         flex-direction: column;
         background: $white;
-        // display: none;
 
         label {
             text-align: start;
@@ -398,7 +402,6 @@
             max-width: 458px;
             margin-bottom: 30px;
 
-
             input {
                 flex-grow: 1;
                 background-color: $grey;
@@ -406,8 +409,6 @@
                 height: 38px;
             }
         }
-
-
 
         input[type="number"]::-webkit-outer-spin-button,
         input[type="number"]::-webkit-inner-spin-button {
@@ -437,14 +438,12 @@
             font-size: 25px;
             color: $darkGrey;
             border: none;
-
         }
 
         label {
             width: 110px;
             font-size: 14px;
         }
-
 
         .leftBtn {
             margin-right: 40px;
@@ -455,7 +454,6 @@
         background-color: $blue;
         margin: 55px 0;
     }
-
 }
 
 .foot {
@@ -509,9 +507,19 @@
     }
 }
 
+@media(max-width:950px) {
+    .title {
+        .triangle {
+
+            .rightTriangle,
+            .leftTriangle {
+                bottom: -10px;
+            }
+        }
+    }
+}
 
 @media(max-width: 800px) {
-
     .headerMenu {
         padding: 0;
 
@@ -519,7 +527,6 @@
             display: flex;
             flex-direction: column;
             padding: 0;
-
 
             li:not(.logo) {
                 padding: 10px 0;
@@ -545,6 +552,22 @@
             max-height: 70px;
             margin: 0 auto;
             margin-bottom: 10px;
+        }
+    }
+
+    .title {
+        .triangle {
+
+            .rightTriangle,
+            .leftTriangle {
+                border-left: 50vw solid transparent;
+                right: 100px;
+                border-bottom: 80px solid $white;
+            }
+
+            .leftTriangle {
+                left: 100px;
+            }
         }
     }
 
@@ -593,23 +616,14 @@
 }
 
 @media(max-width:580px) {
-    // .search {
-    //     margin: 0 auto;
-    // }
-
     .formSearch {
         max-width: 580px;
 
-
-
-
         form {
-
             .searchBtn {
                 padding: 20px 80px;
                 text-align: center;
             }
-
 
             .searchInformation {
                 width: 98%;
@@ -627,9 +641,7 @@
                         display: flex;
                         justify-content: flex-start;
                         align-items: baseline;
-
                     }
-
                 }
             }
 
@@ -640,7 +652,6 @@
     }
 
     .foot {
-
         flex-direction: column;
 
         .phone {
@@ -666,8 +677,22 @@
     }
 }
 
-
 @media(max-width:480px) {
+    .title {
+        .triangle {
+
+            .rightTriangle,
+            .leftTriangle {
+                border-left: 50vw solid transparent;
+                right: 70px;
+                border-bottom: 80px solid $white;
+            }
+
+            .leftTriangle {
+                left: 70px;
+            }
+        }
+    }
 
     .searchInformation {
         padding: 30px;
@@ -684,6 +709,4 @@
     form .searchBtn {
         padding: 30px 50px;
     }
-
-
 }

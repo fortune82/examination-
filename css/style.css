@@ -113,32 +113,51 @@ button {
 }
 
 .title {
-  background: url(../img/background.jpg);
+  background: url(../img/background.jpg) center;
   position: relative;
-  overflow: hidden;
 }
 
-.title:after {
-  content: "";
-  display: block;
+.title .triangle {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.title .triangle .firstLeftTriangle {
   width: 0;
   height: 0;
-  bottom: 0;
-  left: 0;
+  bottom: -2px;
+  left: -2px;
+  position: absolute;
   border-bottom: 70px solid #fff;
   border-right: 50vw solid transparent;
 }
 
-.title:before {
-  content: "";
-  display: block;
+.title .triangle .firstRightTriangle {
   width: 0;
   height: 0;
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: -2px;
+  right: -2px;
   border-bottom: 70px solid #fff;
   border-left: 50vw solid transparent;
+}
+
+.title .triangle .rightTriangle,
+.title .triangle .leftTriangle {
+  width: 0;
+  height: 0;
+  position: absolute;
+  right: 200px;
+  bottom: -5px;
+  border-bottom: 80px solid #fff;
+  border-left: 32vw solid transparent;
+}
+
+.title .triangle .leftTriangle {
+  left: 200px;
+  -webkit-transform: scale(-1, 1);
+          transform: scale(-1, 1);
 }
 
 .title h1 {
@@ -159,6 +178,7 @@ button {
   font-weight: normal;
   padding: 72px 0 25px;
   margin: 0;
+  margin-bottom: 40px;
 }
 
 .discription {
@@ -579,6 +599,13 @@ button {
   color: #766357;
 }
 
+@media (max-width: 950px) {
+  .title .triangle .rightTriangle,
+  .title .triangle .leftTriangle {
+    bottom: -10px;
+  }
+}
+
 @media (max-width: 800px) {
   .headerMenu {
     padding: 0;
@@ -617,6 +644,15 @@ button {
     max-height: 70px;
     margin: 0 auto;
     margin-bottom: 10px;
+  }
+  .title .triangle .rightTriangle,
+  .title .triangle .leftTriangle {
+    border-left: 50vw solid transparent;
+    right: 100px;
+    border-bottom: 80px solid #fff;
+  }
+  .title .triangle .leftTriangle {
+    left: 100px;
   }
 }
 
@@ -731,6 +767,15 @@ button {
 }
 
 @media (max-width: 480px) {
+  .title .triangle .rightTriangle,
+  .title .triangle .leftTriangle {
+    border-left: 50vw solid transparent;
+    right: 70px;
+    border-bottom: 80px solid #fff;
+  }
+  .title .triangle .leftTriangle {
+    left: 70px;
+  }
   .searchInformation {
     padding: 30px;
   }
